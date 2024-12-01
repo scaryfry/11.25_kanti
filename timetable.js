@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const filePath = path.join(__dirname, 'timetable.json'); //Ez egy változó, amiben a fájl elérési útvonala van
 
@@ -39,4 +40,18 @@ function AddLesson(day, lesson){
     let rdata = FileRead(filePath);
     rdata[0][day].push(lesson);
     FileWrite(filePath, rdata);
+}
+FileWrite(filePath, data);
+
+let timetable = FileRead(filePath);
+for (let day in timetable[0]) {
+    console.log(`${day}: ${timetable[0][day].join(', ')}`);
+}
+
+AddLesson('Tuesday', 'Art');
+AddLesson('Friday', 'Chemistry');
+
+timetable = FileRead(filePath);
+for (let day in timetable[0]) {
+    console.log(`${day}: ${timetable[0][day].join(', ')}`);
 }

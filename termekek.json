@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "nev": "Termék 1",
+    "leiras": "Ez az első termék",
+    "ar": 1000
+  },
+  {
+    "id": 2,
+    "nev": "Termék 2",
+    "leiras": "Ez a második termék",
+    "ar": 2000
+  },
+  {
+    "id": 3,
+    "nev": "Termék 3",
+    "leiras": "Ez a harmadik termék",
+    "ar": 3000
+  }
+]
